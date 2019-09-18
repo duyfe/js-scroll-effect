@@ -7,12 +7,13 @@ const optionsDefault = {
   offset: config.offset,
   animationFillMode: config.mode,
 };
+
 /**
- * @property {Array|String} elements       List of elements or id|class string
+ * @property {Array|String} elements       List of element or id|class string includes #|.
  */
 export default class ScrollEffect {
-  constructor(elements = []) {
-    this.elements = elements.length>0?elements:Array.from(document.querySelectorAll(config.attribute));
+  constructor(elements) {
+    this.elements = elements && elements instanceof Array?elements:Array.from(document.querySelectorAll(config.attribute));
     if (this.elements.length<=0) return;
   }
 
@@ -21,7 +22,6 @@ export default class ScrollEffect {
       el.classList.add(config.className.hidden);
 
       const options = Object.assign({}, optionsDefault, JSON.parse(JSON.stringify(el.dataset)));
-
       delete options.animation;
 
       const checkClientRect = this.debounce(() => {
@@ -29,14 +29,14 @@ export default class ScrollEffect {
         const isActive = el.classList.contains(config.className.active);
 
         if (top < window.innerHeight - options.offset && top > 0 && !isActive) {
-          const d = this.getDuration(options.animationDelay, options.animationDuration);
+          const time = this.getDuration(options.animationDelay, options.animationDuration);
 
           Array.from(Object.keys(options)).forEach((key) => el.style[key] = options[key]);
 
           el.classList.add(config.className.active);
           setTimeout(() => {
             el.classList.remove(config.className.hidden);
-          }, d);
+          }, time);
         }
       }, 20);
 

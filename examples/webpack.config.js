@@ -2,6 +2,8 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const isProd = process.env.NODE_ENV = 'production';
+
 module.exports = {
   entry: {
     bundle: [
@@ -11,10 +13,10 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
   },
-  devtool: 'source-map',
+  devtool: isProd?'':'source-map',
   devServer: {
     host: '0.0.0.0',
     port: 8000,

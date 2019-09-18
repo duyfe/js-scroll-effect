@@ -4,7 +4,8 @@
   "description": "",
   "main": "/src/js/index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --mode development"
+    "start": "NODE_ENV=development webpack-dev-server --mode development",
+    "build": "NODE_ENV=production webpack -p --mode production"
   },
   "keywords": [],
   "author": "duyfe",
@@ -16,7 +17,6 @@
     "eslint-config-google": "^0.14.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^4.0.0-beta.8",
-    "husky": "^3.0.5",
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.40.2",
@@ -27,12 +27,6 @@
     "@babel/preset-env": "^7.6.0",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
-    "js-scroll-effect": "^1.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "npm test"
-    }
+    "js-scroll-effect": "^1.0.3"
   }
 }
