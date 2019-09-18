@@ -47,7 +47,7 @@ module.exports = {
     }],
   },
   plugins: [
-    new ExtractTextPlugin('[name].css[hash:7]'),
+    new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),

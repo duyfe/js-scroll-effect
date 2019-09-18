@@ -1,3 +1,7 @@
+.hidden {
+  opacity: 0;
+}
+
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -10,6 +14,7 @@
             transform: translateY(0);
   }
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
