@@ -12,12 +12,12 @@ const optionsDefault = {
  */
 export default class ScrollEffect {
   constructor(elements = []) {
-    this._els = elements.length>0?elements:Array.from(document.querySelectorAll(config.attribute));
-    if (this._els.length<=0) return;
+    this.elements = elements.length>0?elements:Array.from(document.querySelectorAll(config.attribute));
+    if (this.elements.length<=0) return;
   }
 
   init() {
-    this._els.forEach((el) => {
+    this.elements.forEach((el) => {
       el.classList.add(config.className.hidden);
 
       const options = Object.assign({}, optionsDefault, JSON.parse(JSON.stringify(el.dataset)));

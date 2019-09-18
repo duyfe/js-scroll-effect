@@ -1,0 +1,14 @@
+* {margin: 0; padding: 0}
+html,
+body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.container {
+  width: 750px;
+  display: block;
+  margin: auto;
+}
+h1 {
+  color: rebeccapurple;
+}

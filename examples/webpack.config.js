@@ -1,17 +1,23 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
     bundle: [
       'babel-polyfill',
-      path.resolve(__dirname, 'src/js/index.js'),
-      path.resolve(__dirname, 'src/css/scroll-effect.css'),
+      path.resolve(__dirname, 'src/index.js'),
+      path.resolve(__dirname, 'src/style.css'),
     ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scroll-effect.js',
+    filename: 'bundle.js',
+  },
+  devtool: 'source-map',
+  devServer: {
+    host: '0.0.0.0',
+    port: 8000,
   },
   module: {
     rules: [{
@@ -41,6 +47,9 @@ module.exports = {
     }],
   },
   plugins: [
-    new ExtractTextPlugin('scroll-effect.css'),
+    new ExtractTextPlugin('[name].css[hash:7]'),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+    }),
   ],
 };

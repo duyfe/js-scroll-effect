@@ -2,7 +2,7 @@ export default {
   attribute: '[data-animation]',
   className: {
     active: 'animated',
-    hiddens: 'hidden',
+    hidden: 'hidden',
   },
   name: 'fadeInUp',
   duration: '500ms',
