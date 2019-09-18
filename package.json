@@ -1,0 +1,41 @@
+{
+  "name": "scroll-effect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/index.js",
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production webpack -p --mode production && rm -rf dist/*.map",
+    "fix": "eslint src/js/*.js --fix",
+    "test": "eslint src/js/*.js"
+  },
+  "keywords": [
+    "scroll-effect",
+    "scroll"
+  ],
+  "author": "duyfe",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-google": "^0.14.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "husky": "^3.0.5",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm test"
+    }
+  }
+}
