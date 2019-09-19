@@ -69,7 +69,7 @@ export default class JsScrollEffect {
    */
   debounce(func, wait, immediate) {
     let timeout;
-    return function() {
+    return function(...args) {
       const context = this;
       const later = () => {
         timeout = null;

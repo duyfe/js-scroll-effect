@@ -27,6 +27,6 @@
     "@babel/preset-env": "^7.6.0",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
-    "js-scroll-effect": "^1.0.4"
+    "js-scroll-effect": "^1.0.5"
   }
 }
