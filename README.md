@@ -2,6 +2,7 @@
 
 ## Why JS scroll effect?
 
+- Native javascript
 - Ease to use, ease to custom.
 - Lightweight and powerful.
 - Support all web browsers in pc, mobile, tablet.
@@ -12,7 +13,27 @@
   $ npm install js-scroll-effect --save
 ```
 
-## Usage
+## Basic Usage
+
+### Native Js
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" href="/dist/js-scroll-effect.css" />
+  </head>
+
+  <body>
+    <h1 data-animation>Js scroll effect</h1>
+
+    <script src="/dist/js-scroll-effect.js"></script>
+    <script>
+      JsScrollEffect.init();
+    </script>
+    <body></body>
+  </body>
+</html>
+```
 
 ### ES6
 
