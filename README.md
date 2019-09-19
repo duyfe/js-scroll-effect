@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 #### Css
 
 ```Css
-  @import '~/node_modules/js-scroll-effect/dist/scroll-effect.css';
+  @import '~/node_modules/js-scroll-effect/dist/js-scroll-effect.css';
 ```
 
 - Then you make css by yourself in your project.
