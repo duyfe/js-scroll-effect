@@ -28,7 +28,7 @@ export default class JsScrollEffect {
         const {top} = el.getBoundingClientRect();
         const isActive = el.classList.contains(config.className.active);
 
-        if (top < window.innerHeight - options.offset && top > 0 && !isActive) {
+        if (top < window.innerHeight - options.offset && top >= 0 && !isActive) {
           const time = this.getDuration(options.animationDelay, options.animationDuration);
 
           Array.from(Object.keys(options)).forEach((key) => el.style[key] = options[key]);
