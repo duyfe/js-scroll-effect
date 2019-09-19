@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
   @import '~/node_modules/js-scroll-effect/dist/scroll-effect.css';
 ```
 
-- Or you can make css by yourself in your css file
+- Then you make css by yourself in your project.
 
 ```Css
   @keyframes myCustomEffect {
@@ -50,6 +50,14 @@ window.addEventListener('DOMContentLoaded', () => {
 ```
 
 - Then put your `keyframes name` to `data-animation-name` in your html element attribute.
+
+- Some default keyframes already in css file:
+
+  - `fadeIn`
+  - `fadeInUp`
+  - `fadeInDown`
+  - `fadeInLeft`
+  - `fadeInRight`
 
 #### Html
 
