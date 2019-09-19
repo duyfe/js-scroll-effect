@@ -1,6 +1,6 @@
 {
   "name": "js-scroll-effect",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "main": "/src/js/index.js",
   "scripts": {
@@ -13,7 +13,15 @@
   "keywords": [
     "js-scroll-effect",
     "scroll",
-    "scroll animation"
+    "scroll animation",
+    "animation",
+    "ios",
+    "android",
+    "browser",
+    "chrome",
+    "safari",
+    "ie",
+    "edge"
   ],
   "author": "duyfe",
   "license": "ISC",

@@ -6,12 +6,12 @@ module.exports = {
     bundle: [
       'babel-polyfill',
       path.resolve(__dirname, 'src/js/index.js'),
-      path.resolve(__dirname, 'src/css/scroll-effect.css'),
+      path.resolve(__dirname, 'src/css/js-scroll-effect.css'),
     ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scroll-effect.js',
+    filename: 'js-scroll-effect.js',
   },
   module: {
     rules: [{
@@ -41,6 +41,6 @@ module.exports = {
     }],
   },
   plugins: [
-    new ExtractTextPlugin('scroll-effect.css'),
+    new ExtractTextPlugin('js-scroll-effect.css'),
   ],
 };

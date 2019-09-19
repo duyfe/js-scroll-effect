@@ -19,7 +19,7 @@ module.exports = {
   devtool: isProd?'':'source-map',
   devServer: {
     host: '0.0.0.0',
-    port: 8000,
+    port: 5000,
   },
   module: {
     rules: [{

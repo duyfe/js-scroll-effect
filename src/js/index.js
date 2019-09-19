@@ -11,9 +11,9 @@ const optionsDefault = {
 /**
  * @property {Array|String} elements       List of element or id|class string includes #|.
  */
-export default class ScrollEffect {
+export default class JsScrollEffect {
   constructor(elements) {
-    this.elements = elements && elements instanceof Array?elements:Array.from(document.querySelectorAll(config.attribute));
+    this.elements = elements && elements instanceof NodeList?Array.from(elements):Array.from(document.querySelectorAll(config.attribute));
     if (this.elements.length<=0) return;
   }
 
@@ -69,7 +69,7 @@ export default class ScrollEffect {
    */
   debounce(func, wait, immediate) {
     let timeout;
-    return function(...args) {
+    return function() {
       const context = this;
       const later = () => {
         timeout = null;

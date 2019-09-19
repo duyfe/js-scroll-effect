@@ -1,7 +1,6 @@
-import ScrollEffect from 'js-scroll-effect';
+import JsScrollEffect from 'js-scroll-effect';
 
 window.addEventListener('DOMContentLoaded', () => {
-  const scrollEffect = new ScrollEffect();
-  scrollEffect.init();
-  console.log(scrollEffect);
+  const jse = new JsScrollEffect();
+  jse.init();
 });
