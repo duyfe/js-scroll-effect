@@ -12,8 +12,8 @@ const optionsDefault = {
  * @property {Array|String} elements       List of element or id|class string includes #|.
  */
 export default class JsScrollEffect {
-  constructor(elements) {
-    this.elements = elements && elements instanceof NodeList?Array.from(elements):Array.from(document.querySelectorAll(config.attribute));
+  constructor(elements = []) {
+    this.elements = elements.length>0?elements:Array.from(document.querySelectorAll(config.attribute));
     if (this.elements.length<=0) return;
   }
 

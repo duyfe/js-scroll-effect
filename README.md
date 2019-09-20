@@ -98,7 +98,7 @@ import JsScrollEffect from 'js-scroll-effect';
 
 window.addEventListener('DOMContentLoaded', () => {
   // init scroll effect to all page
-  const myElements = document.querySelectorAll('.my-element');
+  const myElements = Array.from(document.querySelectorAll('.my-element'));
   const jse = new JsScrollEffect(myElements);
   jse.init();
 });
