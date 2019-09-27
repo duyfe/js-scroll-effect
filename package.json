@@ -1,13 +1,13 @@
 {
   "name": "js-scroll-effect",
-  "version": "2.0.1",
+  "version": "2.0.7",
   "author": {
     "name": "Duy Pham",
     "email": "ngocduyfe@gmail.com"
   },
   "repository": "https://github.com/duyfe/js-scroll-effect.git",
   "description": "The lightweight and strong scroll effect for every web browser",
-  "main": "src/js/index.js",
+  "main": "src/js/js-scroll-effect.js",
   "scripts": {
     "remove:dist": "rm -rf dist",
     "remove:map": "rm -rf dist/*.map",
@@ -43,9 +43,10 @@
   },
   "dependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
-    "babel-loader": "^8.0.6",
-    "babel-polyfill": "^6.26.0"
+    "babel-loader": "^8.0.6"
   },
   "husky": {
     "hooks": {

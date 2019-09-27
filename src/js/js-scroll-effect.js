@@ -1,4 +1,15 @@
-import config from './config';
+const config = {
+  attribute: '[data-animation]',
+  className: {
+    active: 'animated',
+    hidden: 'hidden',
+  },
+  name: 'fadeInUp',
+  duration: '500ms',
+  delay: '300ms',
+  offset: 0,
+  mode: 'forwards',
+};
 
 const optionsDefault = {
   animationName: config.name,

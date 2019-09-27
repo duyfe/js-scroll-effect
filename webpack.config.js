@@ -4,14 +4,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
     bundle: [
-      'babel-polyfill',
+      '@babel/polyfill',
       path.resolve(__dirname, 'src/js/index.js'),
       path.resolve(__dirname, 'src/css/js-scroll-effect.css'),
     ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js-scroll-effect.js',
+    filename: 'js-scroll-effect.min.js',
   },
   module: {
     rules: [{
@@ -21,7 +21,8 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env'],
-        },
+          plugins: ['@babel/plugin-proposal-object-rest-spread']
+        }
       },
     }, {
       test: /\.css$/,

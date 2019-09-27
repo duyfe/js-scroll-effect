@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import JsScrollEffect from './js-scroll-effect';
 
 const scrollEffect = new JsScrollEffect();
