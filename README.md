@@ -20,15 +20,15 @@
 ```html
 <html>
   <head>
-    <link rel="stylesheet" href="/dist/js-scroll-effect.css" />
+    <link rel="stylesheet" href="/dist/jse.css" />
   </head>
 
   <body>
     <h1 data-animation>Js scroll effect</h1>
 
-    <script src="/dist/js-scroll-effect.js"></script>
+    <script src="/dist/jse.js"></script>
     <script>
-      JsScrollEffect.init();
+      JSE.init();
     </script>
     <body></body>
   </body>
@@ -40,19 +40,18 @@
 #### Javascript
 
 ```javascript
-import JsScrollEffect from 'js-scroll-effect';
+import JSE from 'js-scroll-effect';
 
 window.addEventListener('DOMContentLoaded', () => {
   // init scroll effect to all page
-  const jse = new JsScrollEffect();
-  jse.init();
+  JSE.init();
 });
 ```
 
 #### Css
 
 ```Css
-  @import '~/node_modules/js-scroll-effect/dist/js-scroll-effect.css';
+  @import '~/node_modules/js-scroll-effect/dist/jse.css';
 ```
 
 - Then you make css by yourself in your project.
@@ -94,13 +93,12 @@ window.addEventListener('DOMContentLoaded', () => {
 #### Javascript options
 
 ```javascript
-import JsScrollEffect from 'js-scroll-effect';
+import JSE from 'js-scroll-effect';
 
 window.addEventListener('DOMContentLoaded', () => {
   // init scroll effect to all page
   const myElements = Array.from(document.querySelectorAll('.my-element'));
-  const jse = new JsScrollEffect(myElements);
-  jse.init();
+  JSE.init(myElements);
 });
 ```
 

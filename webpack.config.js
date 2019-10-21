@@ -6,12 +6,12 @@ module.exports = {
     bundle: [
       '@babel/polyfill',
       path.resolve(__dirname, 'src/js/index.js'),
-      path.resolve(__dirname, 'src/css/js-scroll-effect.css'),
+      path.resolve(__dirname, 'src/css/jse.css'),
     ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js-scroll-effect.min.js',
+    filename: 'jse.min.js',
   },
   module: {
     rules: [{
@@ -21,8 +21,8 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-object-rest-spread']
-        }
+          plugins: ['@babel/plugin-proposal-object-rest-spread'],
+        },
       },
     }, {
       test: /\.css$/,
@@ -42,6 +42,6 @@ module.exports = {
     }],
   },
   plugins: [
-    new ExtractTextPlugin('js-scroll-effect.css'),
+    new ExtractTextPlugin('jse.css'),
   ],
 };

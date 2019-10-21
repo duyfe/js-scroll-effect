@@ -1,7 +1,3 @@
-import '@babel/polyfill';
-import JsScrollEffect from './js-scroll-effect';
-
-const scrollEffect = new JsScrollEffect();
-window.JsScrollEffect = scrollEffect;
-
-export default JsScrollEffect;
+import JSE, {init} from './jse';
+window.JSE = JSE;
+export default {init};
